@@ -466,36 +466,6 @@ h4.titlebox {
     border-radius: 10px;
 }
 
-/* Floating button styling */
-.floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #ff5722;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-/* Hover effect */
-.floating-btn:hover {
-    background-color: #e64a19;
-}
-
-/* Cart icon (optional, can use Font Awesome or custom SVG) */
-.floating-btn i {
-    font-size: 24px;
-}
-
 /* -----------------------footer---------------------- */
 
 .footer {
@@ -570,6 +540,74 @@ h4.titlebox {
     /* Change color on hover to a lighter shade */
 }
 
-.top {
-    justify-content: space-between;
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f05e1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 34px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f05e1c;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fbff1d;
+    color: #eaaa9a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-button:hover {
+    background-color: #b3775b;
+}
+
+.remove-button {
+    color: #dc3545;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.remove-button:hover {
+    text-decoration: underline;
 }

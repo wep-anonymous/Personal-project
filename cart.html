@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesCart.css">
     <title>波夏甜點店</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -27,24 +27,47 @@
         </div>
     </div>
     <div class="wrapper">
+        <div class="cart-container">
+            <h2>購物車</h2>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th>產品</th>
+                        <th>價格</th>
+                        <th>數量</th>
+                        <th>總計</th>
+                        <th>取消選項</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-name">宇治抹茶馬卡餅</td>
+                        <td>$100.00</td>
+                        <td class="quantity">
+                            <input type="number" value="1" min="1">
+                        </td>
+                        <td>$100.00</td>
+                        <td><a href="#" class="remove-button">移除</a></td>
+                    </tr>
+                    <tr>
+                        <td class="product-name">生巧克力磚</td>
+                        <td>$150.00</td>
+                        <td class="quantity">
+                            <input type="number" value="2" min="1">
+                        </td>
+                        <td>$300.00</td>
+                        <td><a href="#" class="remove-button">移除</a></td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <!-- Container 2: First Carousel -->
-        <div class="container2">
-            <div class="content">
-                <div>
-                    <h4 class="titlebox">常見問題FAQ</h4>
-                </div>
-                <div class="subtitle">
-                    <h2>常見問題FAQ</h2>
-                </div>
-
+            <div class="total-price">
+                總計: $400.00
             </div>
+
+            <button class="checkout-button">結帳</button>
         </div>
-
-
-
-
 
         <div class="footer">
             <div class="footerbox">
@@ -82,7 +105,7 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <script src="scriptCart.js"></script> <!-- Link to your JavaScript file -->
 </body>
 
 </html>

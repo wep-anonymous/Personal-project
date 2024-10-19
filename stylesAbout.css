@@ -189,8 +189,9 @@ body {
 .top-section {
     display: flex;
     /* Use flexbox for side-by-side layout */
-    align-items: center;
+    /* align-items: center; */
     /* Vertically center the items */
+    height: 1000px;
 }
 
 .img1 {
@@ -200,6 +201,9 @@ body {
     /* Maintain aspect ratio */
     z-index: 1;
     /* Ensure it is above the img2 */
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: flex-start;
 }
 
 .text1 {

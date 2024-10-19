@@ -466,36 +466,6 @@ h4.titlebox {
     border-radius: 10px;
 }
 
-/* Floating button styling */
-.floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #ff5722;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-/* Hover effect */
-.floating-btn:hover {
-    background-color: #e64a19;
-}
-
-/* Cart icon (optional, can use Font Awesome or custom SVG) */
-.floating-btn i {
-    font-size: 24px;
-}
-
 /* -----------------------footer---------------------- */
 
 .footer {
@@ -570,6 +540,53 @@ h4.titlebox {
     /* Change color on hover to a lighter shade */
 }
 
-.top {
-    justify-content: space-between;
+
+.login-container {
+    background-color: #eaaa9a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #218838;
+}
+
+.login-container p {
+    text-align: center;
+}
+
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
 }

@@ -7,6 +7,14 @@ $(".title-link").hover(
     }
 );
 
+document.querySelectorAll(".title-link").forEach((link) => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default anchor behavior
+        const page = this.getAttribute("data-page"); // Get the page from data attribute
+        window.location.href = page; // Navigate to the specified page
+    });
+});
+
 document.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
