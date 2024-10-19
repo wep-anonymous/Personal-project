@@ -1,0 +1,298 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f6d9d0;
+    border: 0;
+}
+
+.banner {
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 20px 0px 20px 0px;
+    background-color: #f05e1c;
+    margin: auto;
+}
+
+.title {
+    display: flex;
+}
+
+.title-link {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Noto Sans TC";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.8px;
+    padding-left: 10px;
+    transition: transform 1s;
+    /* Smooth transition */
+}
+
+.title-link:hover {
+    color: #ddd;
+}
+
+.nav-links {
+    display: flex;
+    align-items: baseline;
+    padding-right: 10px;
+}
+
+.nav-link {
+    color: #fff;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    margin-right: 20px;
+    text-decoration: none;
+    /* Link color */
+}
+
+.nav-link:hover {
+    color: #ddd;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    /* Add space between icons */
+}
+
+.icon-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.icon-link:hover {
+    color: #ddd;
+}
+
+.icon-link i {
+    margin-right: 10px;
+}
+
+/* ----------------------banner------- */
+.wrapper {
+    margin: auto;
+    width: 1000px;
+}
+
+.subtitle {
+    display: flex;
+    width: 997px;
+    height: 129px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #f05e1c;
+    background: #f05e1c;
+    color: #fff;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #fff;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 23px;
+    margin-top: 34px;
+    /* Add space below the subtitle */
+}
+
+.image-container {
+    position: relative;
+    max-width: 600px;
+    /* Set the width of the container */
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    /* Push the container to the right */
+    margin-right: 0;
+    /* Remove any right margin */
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    /* Vertically center the textbox */
+    left: -50%;
+    /* Position the box so it extends outside the left side of the image */
+    transform: translateY(-50%);
+    /* Adjust to vertically center the box */
+    background-color: rgba(255, 165, 0, 0.5);
+    /* Translucent background */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 36px;
+}
+
+/*-----------------part1------------  */
+
+.historybox {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.historyimg {
+    width: 400px;
+    height: 300px;
+    background-color: grey;
+}
+
+.historytext {
+    display: flex;
+    align-items: center;
+    line-height: 2.0;
+}
+
+.historytext {
+    display: flex;
+    align-items: center;
+    line-height: 2.0;
+}
+
+.foodtext {
+    display: flex;
+    align-items: top;
+    line-height: 2.0;
+}
+
+.container {
+    position: relative;
+    /* Set the positioning context for absolute elements */
+}
+
+.top-section {
+    display: flex;
+    /* Use flexbox for side-by-side layout */
+    align-items: center;
+    /* Vertically center the items */
+}
+
+.img1 {
+    width: 300px;
+    /* Set width for img1 */
+    height: auto;
+    /* Maintain aspect ratio */
+    z-index: 1;
+    /* Ensure it is above the img2 */
+}
+
+.text1 {
+    margin-left: 20px;
+    display: block;
+    /* Space between img1 and text1 */
+}
+
+
+.img2 {
+    position: absolute;
+    /* Absolute positioning to overlap img1 */
+    top: 200px;
+    /* Adjust this value to control the overlap */
+    left: 0;
+    /* Align it to the left */
+    width: 1000px;
+    /* Set width for img2 */
+    height: 300px;
+    /* Maintain aspect ratio */
+    z-index: 0;
+    /* Ensure it is below img1 */
+}
+
+/* --------------footer---------------- */
+.footer {
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #f05e1c;
+    text-align: center;
+}
+
+.footerbox {
+    margin: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.footerbox h3 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes padding */
+    margin: 0;
+    /* Removes margin */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-links li {
+    display: inline-block;
+    /* Displays list items in a row */
+    margin: 0 10px;
+    /* Adds margin between links */
+    text-align: left;
+}
+
+.footer-links a {
+    color: #fff;
+    /* White color for links */
+    text-decoration: none;
+    /* Removes underline from links */
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+    /* Underline on hover */
+}
+
+.social-media-icons a {
+    margin: 0 30px;
+    /* Adds margin between icons */
+}
+
+.social-media-icons i {
+    font-size: 48px;
+    /* Set icon size to 36px */
+    color: white;
+    /* Change icon color to white */
+}
+
+.social-media-icons a:hover i {
+    color: #ddd;
+    /* Change color on hover to a lighter shade */
+}
