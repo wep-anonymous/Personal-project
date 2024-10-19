@@ -99,18 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-$(document).ready(function () {
-    // Handle click events on footer links
-    $(".link").on("click", function (event) {
-        event.preventDefault(); // Prevent default link behavior
-        let url = $(this).data("url"); // Get the URL from the data attribute
-        window.location.href = url; // Redirect to the URL
-    });
+// $(document).ready(function () {
+//     // Handle click events on footer links
+//     $(".link").on("click", function (event) {
+//         event.preventDefault(); // Prevent default link behavior
+//         let url = $(this).data("url"); // Get the URL from the data attribute
+//         window.location.href = url; // Redirect to the URL
+//     });
 
-    // Handle click events on social media icons
-    $(".social").on("click", function (event) {
-        event.preventDefault(); // Prevent default link behavior
-        let url = $(this).data("url"); // Get the URL from the data attribute
-        window.open(url, "_blank"); // Open the URL in a new tab
-    });
-});
+//     // Handle click events on social media icons
+//     $(".social").on("click", function (event) {
+//         event.preventDefault(); // Prevent default link behavior
+//         let url = $(this).data("url"); // Get the URL from the data attribute
+//         window.open(url, "_blank"); // Open the URL in a new tab
+//     });
+// });
