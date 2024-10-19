@@ -8,6 +8,7 @@ body {
 }
 
 .banner {
+    position: fixed;
     display: flex;
     width: 1200px;
     align-items: center;
@@ -15,7 +16,12 @@ body {
     gap: 35px;
     padding: 20px 0px 20px 0px;
     background-color: #f05e1c;
-    margin: auto;
+    left: 50%;
+    /* Start the element 50% from the left of the screen */
+    transform: translateX(-50%);
+    /* Shift the element left by half of its width to center it */
+    z-index: 1;
+    top: 0;
 }
 
 .title {
@@ -93,6 +99,7 @@ body {
     background: #eaaa9a;
     width: 1200px;
     margin: auto;
+    margin-top: 120px;
 }
 
 
