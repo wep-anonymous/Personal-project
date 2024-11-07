@@ -1,81 +1,71 @@
-/* styles.css */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: #f6d9d0;
-    border: 0;
+    font-size: 16px;
+    background-color: #efd9c7;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 480px;
 }
 
-.banner {
-    position: fixed;
-    display: flex;
-    width: 1200px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
-    padding: 20px 0px 20px 0px;
-    background-color: #f05e1c;
-    left: 50%;
-    /* Start the element 50% from the left of the screen */
-    transform: translateX(-50%);
-    /* Shift the element left by half of its width to center it */
-    z-index: 1;
-    top: 0;
+* {
+    box-sizing: border-box;
 }
 
-.title {
-    display: flex;
-}
-
-.title-link {
-    color: #fff;
+/* -------------------------------------------nav------------------------------------------ */
+a {
     text-decoration: none;
-    text-align: center;
-    font-family: "Noto Sans TC";
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 4.8px;
-    padding-left: 10px;
-    transition: transform 1s;
-    /* Smooth transition */
+    color: white;
 }
 
-.title-link:hover {
-    color: #ddd;
-}
-
-
-.navlinks {
+nav {
+    width: 100%;
     display: flex;
-    align-items: baseline;
-    padding-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b3c46;
+    color: #fff;
+    padding: 10px;
+    height: 80px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav .logoCake {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav .logo:hover {
+    color: yellow;
+}
+
+nav .navlist {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    float: right;
 }
 
 .navlink {
-    color: #fff;
-    font-family: "Noto Sans TC";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 1.6px;
-    margin-right: 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    color: white;
     text-decoration: none;
-    /* Link color */
 }
 
 .navlink:hover {
-    color: #ddd;
-}
-
-
-.icons {
-    display: flex;
-    gap: 15px;
-    /* Add space between icons */
+    color: yellow;
 }
 
 .icon-link {
@@ -83,17 +73,57 @@ body {
     text-decoration: none;
     font-size: 24px;
     display: inline-block;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navlink,
+.icon-link,
+.logo {
+    white-space: nowrap;
+    /* Prevent text from wrapping */
 }
 
 .icon-link:hover {
-    color: #ddd;
+    color: #ffcc00;
+    /* Change color on hover */
 }
 
-.icon-link i {
-    margin-right: 10px;
+.hamburger {
+    display: none;
+    /* Hidden on desktop by default */
+    flex-direction: column;
+    justify-content: center;
+    /* Center the hamburger bars vertically */
+    align-items: center;
+    /* Center the hamburger bars horizontally */
+    cursor: pointer;
 }
 
-/* ----------------------banner--------------------- */
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: #ffffff;
+    transform-origin: left center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* Toggle hamburger icon when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* ----------------------------------------nav--------------------------------------------- */
 
 .wrapper {
     background: #eaaa9a;
@@ -473,14 +503,24 @@ h4.titlebox {
     border-radius: 10px;
 }
 
+/* Hover effect */
+.floating-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Cart icon (optional, can use Font Awesome or custom SVG) */
+.floating-btn i {
+    font-size: 24px;
+}
+
 /* -----------------------footer---------------------- */
 
 .footer {
-    width: 1200px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     margin: auto;
     margin-top: 10px;
-    background-color: #f05e1c;
+    background-color: #8B3C46;
     text-align: center;
 }
 
@@ -488,6 +528,7 @@ h4.titlebox {
     margin: auto;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .footerbox h3 {
@@ -508,6 +549,7 @@ h4.titlebox {
     text-align: center;
 }
 
+
 .footer-links li {
     display: inline-block;
     /* Displays list items in a row */
@@ -526,7 +568,7 @@ h4.titlebox {
 }
 
 .footer-links a:hover {
-    color: #ddd;
+    color: yellow;
     /* Underline on hover */
 }
 
@@ -543,57 +585,367 @@ h4.titlebox {
 }
 
 .social-media-icons a:hover i {
-    color: #ddd;
+    color: yellow;
     /* Change color on hover to a lighter shade */
 }
 
 
-.login-container {
-    background-color: #eaaa9a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: auto;
+
+.top {
+    justify-content: space-between;
 }
 
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+/* ----------------------------------480 burger------------------------------------------ */
 
-.login-container input[type="text"],
-.login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+/* --------------------------------------768 burger-------------------------------------------------- */
 
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+/* Mobile view adjustments */
+@media screen and (max-width:868px) {
+    .hamburger {
+        display: flex;
+    }
 
-.login-container button:hover {
-    background-color: #218838;
-}
+    nav .navlist {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
 
-.login-container p {
-    text-align: center;
-}
+        top: 80px;
+        left: 0;
+        background-color: #393939;
+        display: none;
+        justify-content: flex;
+        align-items: center;
+        z-index: 1000;
+    }
 
-.login-container a {
-    color: #007bff;
-    text-decoration: none;
-}
+    nav .navlist.active {
+        display: flex;
+        /* justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px; */
+    }
 
-.login-container a:hover {
-    text-decoration: underline;
+    .navlink,
+    .icon-link {
+
+        font-size: 18px;
+        /* Consistent font size */
+        color: white;
+        /* Uniform text color */
+
+        /* Consistent padding */
+        width: 100%;
+        /* Ensure links occupy full width */
+        text-align: center;
+        /* Center text within each link */
+
+    }
+
+    .navlink:hover {
+        color: #ffcc00;
+        /* Yellow color on hover */
+    }
+
+    .image-container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center content */
+        top: 20px;
+        /* Adjust top spacing */
+    }
+
+    .text-container {
+        margin-top: 10px;
+        /* Reduce margin for smaller screens */
+        padding: 0 15px;
+        /* Add some padding for readability */
+    }
+
+    .text-container p {
+        font-size: 20px;
+        /* Decrease font size for smaller screens */
+        max-width: 100%;
+        /* Allow text to fill more of the screen */
+    }
+
+    .buynow {
+        width: 100%;
+        /* Make button width responsive */
+        font-size: 24px;
+        /* Adjust button text size */
+        height: auto;
+        /* Let the button height adjust */
+        flex-wrap: nowrap;
+
+    }
+
+    .buynow2 {
+        width: 100%;
+        /* Make button width responsive */
+        font-size: 24px;
+        /* Adjust button text size */
+        height: auto;
+        /* Let the button height adjust */
+        flex-wrap: nowrap;
+
+    }
+
+    .lessonnow {
+        width: 100%;
+        /* Make button width responsive */
+        font-size: 24px;
+        /* Adjust button text size */
+        height: auto;
+        /* Let the button height adjust */
+        flex-wrap: nowrap;
+
+    }
+
+    .marquee-container {
+        font-size: 24px;
+        /* Decrease font size for marquee text */
+        height: 60px;
+        /* Adjust height for smaller screens */
+    }
+
+    /* -------------------------------------------------------------------- */
+    .subtitle {
+        font-size: 20px;
+        /* Smaller subtitle font size */
+        height: auto;
+        /* Allow height to adjust */
+        padding: 10px 0;
+        /* Add some padding */
+    }
+
+
+    /* -------------------------video-------------------------------------- */
+
+    .container4 {
+        max-width: 1200px;
+        /* Set a max width for larger screens */
+        margin: auto;
+        /* Center the container */
+        padding: 20px;
+        /* Add some padding for aesthetic spacing */
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        /* Stack children vertically */
+        align-items: center;
+        /* Center content horizontally */
+        width: 100%;
+        /* Full width */
+    }
+
+    .subtitle {
+        margin-bottom: 20px;
+        /* Spacing between subtitle and video */
+    }
+
+    .video-container {
+        width: 100%;
+        /* Make video full width */
+        height: 0;
+        /* Set to zero and use padding for responsive aspect ratio */
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio (9/16 * 100) */
+        position: relative;
+        /* Position relative for iframe */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        /* Position iframe absolutely within its container */
+        top: 0;
+        /* Align to the top */
+        left: 0;
+        /* Align to the left */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+    }
+
+    .last-container {
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: column;
+        /* Stack content vertically */
+        align-items: center;
+        /* Center content */
+        width: 100%;
+        /* Full width */
+        margin-top: 20px;
+        /* Spacing above the last container */
+    }
+
+    .aboutbox {
+        width: 90%;
+        /* Adjust about box width */
+        text-align: center;
+        /* Center text */
+        padding: 0%;
+        margin: 0;
+    }
+
+    .lastimg {
+        width: 100%;
+        /* Adjust last image to full width */
+        height: auto;
+        /* Allow height to adjust */
+        min-width: 453px;
+    }
+
+    /* ----------------------------------slider-------------------------- */
+
+    .slider-container {
+        position: relative;
+        width: 50%;
+        /* Adjust as per your need */
+        height: 500px;
+        /* Adjust as per your need */
+        overflow: hidden;
+        margin: auto;
+    }
+
+    /* Wrapper for slider content */
+    .slider-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /* Ensure only the images inside the slider move */
+    }
+
+    /* The slider holding all images, will slide horizontally */
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+        /* Make sure it's 100% width */
+    }
+
+    /* Individual slides inside the slider */
+    .slide {
+        width: 100%;
+        /* Each image takes up 100% of the container */
+        flex-shrink: 0;
+        /* Prevent images from shrinking */
+        height: 100%;
+    }
+
+    /* Ensure images fit inside their container */
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Ensures aspect ratio is maintained */
+    }
+
+    /* Adjust indicator styles */
+    .indicator {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .indicator-button {
+        border: none;
+        background: #ccc;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .indicator-button.active {
+        background: #333;
+    }
+
+    /* ------------------------------------------------------------------------------- */
+
+    .floating-btn {
+        width: 50px;
+        /* Adjust size of the floating button */
+        height: 50px;
+        /* Adjust size */
+        font-size: 20px;
+        /* Smaller icon size */
+    }
+
+    /* --------------------------------footer--------------------- */
+    .footer {
+        width: 100%;
+        /* Ensure it fills the entire width */
+        padding: 20px;
+        height: auto;
+        /* Remove fixed height so it can shrink */
+        flex-direction: column;
+        /* Stack everything vertically */
+        justify-content: flex-start;
+        /* Align elements to the top */
+    }
+
+    .footerbox {
+        width: 100%;
+        align-items: center;
+        /* Center the content inside the box */
+    }
+
+    .footerbox h3 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+        text-align: center;
+        /* Keep links centered */
+        display: flex;
+        flex-direction: column;
+        /* Stack links vertically in RWD */
+        align-items: center;
+        /* Center the links */
+        margin-top: 20px;
+        /* Add space above the links */
+    }
+
+    .footer-links li {
+        margin: 10px 0;
+    }
+
+    .footer-links a {
+        font-size: 24px;
+    }
+
+    /* Specifically target the .top div in RWD */
+    .top {
+        display: flex;
+        flex-direction: column;
+        /* Stack the links vertically in RWD */
+        align-items: center;
+        /* Center the links */
+        margin-bottom: 20px;
+        /* Space between the links and next content */
+    }
+
+    .social-media-icons {
+        width: 100%;
+        justify-content: center;
+        /* Center social icons */
+        margin-top: 20px;
+    }
+
+    .social-media-icons a {
+        margin: 0 15px;
+    }
+
+    .social-media-icons i {
+        font-size: 36px;
+    }
 }
