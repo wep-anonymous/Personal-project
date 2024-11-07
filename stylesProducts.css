@@ -1,0 +1,465 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #efd9c7;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 480px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------nav------------------------------------------ */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b3c46;
+    color: #fff;
+    padding: 10px;
+    height: 80px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav .logoCake {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav .logo:hover {
+    color: yellow;
+}
+
+nav .navlist {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    float: right;
+}
+
+.navlink {
+    margin: 0 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    color: yellow;
+}
+
+.icon-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navlink,
+.icon-link,
+.logo {
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+.icon-link:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+}
+
+.hamburger {
+    display: none;
+    /* Hidden on desktop by default */
+    flex-direction: column;
+    justify-content: center;
+    /* Center the hamburger bars vertically */
+    align-items: center;
+    /* Center the hamburger bars horizontally */
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: #ffffff;
+    transform-origin: left center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* Toggle hamburger icon when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* ----------------------------------------nav--------------------------------------------- */
+
+.subtitle {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #efd9c7;
+    background: #efd9c7;
+    color: #fff;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: auto;
+    border-radius: 10px;
+
+    margin-top: 80px;
+    /* Add space below the subtitle */
+}
+
+.product-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 20px;
+    height: 356px;
+    overflow: hidden;
+}
+
+.section-btn {
+    background-color: #efd9c7;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+}
+
+.section-btn.bg-blue-500 {
+    background-color: #d9718A;
+    color: #d9718A;
+}
+
+.product-item {
+    background-color: #efd9c7;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 300px
+}
+
+.product-item img {
+    width: 300px;
+    height: auto;
+    /* or any other value */
+    object-fit: cover;
+    display: inline-block;
+}
+
+.product-details {
+    padding: 1rem;
+    margin: auto;
+}
+
+.product-name {
+    font-size: 1.125rem;
+    font-weight: 900;
+    color: rgb(102, 88, 88);
+    font-size: 24px;
+}
+
+
+
+
+/* ------------------------------------floating button----------------------------- */
+
+/* Floating button styling */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.floating-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Cart icon (optional, can use Font Awesome or custom SVG) */
+.floating-btn i {
+    font-size: 24px;
+}
+
+/* -----------------------footer---------------------- */
+
+.footer {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #8B3C46;
+    text-align: center;
+}
+
+.footerbox {
+    margin: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.footerbox h3 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes padding */
+    margin: 0;
+    /* Removes margin */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.footer-links li {
+    display: inline-block;
+    /* Displays list items in a row */
+    margin: 0 10px;
+    /* Adds margin between links */
+    text-align: left;
+}
+
+.footer-links a {
+    color: #fff;
+    /* White color for links */
+    text-decoration: none;
+    /* Removes underline from links */
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.footer-links a:hover {
+    color: yellow;
+    /* Underline on hover */
+}
+
+.social-media-icons a {
+    margin: 0 30px;
+    /* Adds margin between icons */
+}
+
+.social-media-icons i {
+    font-size: 48px;
+    /* Set icon size to 36px */
+    color: white;
+    /* Change icon color to white */
+}
+
+.social-media-icons a:hover i {
+    color: yellow;
+    /* Change color on hover to a lighter shade */
+}
+
+
+
+.top {
+    justify-content: space-between;
+}
+
+/* ----------------------------------480 burger------------------------------------------ */
+
+/* --------------------------------------768 burger-------------------------------------------------- */
+
+/* Mobile view adjustments */
+@media screen and (max-width:868px) {
+    .product-item img {
+        height: 10rem;
+    }
+}
+
+.hamburger {
+    display: flex;
+}
+
+nav .navlist {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    top: 80px;
+    left: 0;
+    background-color: #393939;
+    display: none;
+    justify-content: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav .navlist.active {
+    display: flex;
+    /* justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px; */
+}
+
+.navlink,
+.icon-link {
+
+    font-size: 18px;
+    /* Consistent font size */
+    color: white;
+    /* Uniform text color */
+
+    /* Consistent padding */
+    width: 100%;
+    /* Ensure links occupy full width */
+    text-align: center;
+    /* Center text within each link */
+
+}
+
+.navlink:hover {
+    color: #ffcc00;
+    /* Yellow color on hover */
+}
+
+/* -------------------------------------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------------------------------- */
+
+.floating-btn {
+    width: 50px;
+    /* Adjust size of the floating button */
+    height: 50px;
+    /* Adjust size */
+    font-size: 20px;
+    /* Smaller icon size */
+}
+
+/* --------------------------------footer--------------------- */
+.footer {
+    width: 100%;
+    /* Ensure it fills the entire width */
+    padding: 20px;
+    height: auto;
+    /* Remove fixed height so it can shrink */
+    flex-direction: column;
+    /* Stack everything vertically */
+    justify-content: flex-start;
+    /* Align elements to the top */
+}
+
+.footerbox {
+    width: 100%;
+    align-items: center;
+    /* Center the content inside the box */
+}
+
+.footerbox h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    text-align: center;
+    /* Keep links centered */
+    display: flex;
+    flex-direction: column;
+    /* Stack links vertically in RWD */
+    align-items: center;
+    /* Center the links */
+    margin-top: 20px;
+    /* Add space above the links */
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    font-size: 24px;
+}
+
+/* Specifically target the .top div in RWD */
+.top {
+    display: flex;
+    flex-direction: column;
+    /* Stack the links vertically in RWD */
+    align-items: center;
+    /* Center the links */
+    margin-bottom: 20px;
+    /* Space between the links and next content */
+}
+
+.social-media-icons {
+    width: 100%;
+    justify-content: center;
+    /* Center social icons */
+    margin-top: 20px;
+}
+
+.social-media-icons a {
+    margin: 0 15px;
+}
+
+.social-media-icons i {
+    font-size: 36px;
+}
+}

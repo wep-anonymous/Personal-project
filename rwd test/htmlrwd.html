@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式選單設計</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="stylesrwd.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="logoCake">
+            <a href="#" class="logo">波夏甜點店</a>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/cake.png" alt="cake" />
+        </div>
+        <ul class="navlist">
+            <li><a href="#" class="navlink">關於我們/產品</a></li>
+            <li><a href="#" class="navlink">線上訂購</a></li>
+            <li><a href="#" class="navlink">甜點工坊</a></li>
+            <li><a href="#" class="navlink">聯絡我們</a></li>
+            <li><a href="#" class="navlink">常見問題FAQ</a></li>
+            <li><a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="account.html" class="icon-link"><i class="fas fa-user"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="image-container">
+            <img src="./Picture/bird.png" alt="bird" class="bird">
+            <div class="text-container">
+                <p>極盡所能呈現最好一份高貴的甜點，<br>
+                    表達送蛋糕的人最誠摯的心意，<br>
+                    讓收到的人感到最珍貴的禮物</p>
+                <a href="products.html" style="text-decoration: none;">
+                    <button class="buynow">立即購買</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="marquee-container">
+            <p id="marquee-text"></p>
+        </div>
+    </div>
+
+    <div class="marquee-container">
+        <p id="marquee-text">四季有你相伴，與甜蜜美味共度美好時光，盡享季節限定的純粹幸福！</p>
+    </div>
+    <!-- ------------------------------CAROUSEL----------------------------------------- -->
+    <div class="subtitle">
+        <h2>9月熱門商品</h2>
+    </div>
+    <!-- <div class="container2">
+        <div class="content">
+            <div class="carousel-container">
+                <div class="carousel carousel-1">
+                    <div class="carousel-images carousel-images-1">
+                        <div class="carousel-item">
+                            <img src="./Picture/可麗露.jpg" alt="可麗露">
+                            <div class="caption">可麗露</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/咖哩麵包.jpg" alt="咖哩麵包">
+                            <div class="caption">咖哩麵包</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/宇治抹茶馬卡餅.jpg" alt="宇治抹茶馬卡餅">
+                            <div class="caption">宇治抹茶馬卡餅</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/巧克力熔岩塔.jpg" alt="巧克力熔岩塔">
+                            <div class="caption">巧克力熔岩塔</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/抹茶古典蛋糕.jpg" alt="抹茶古典蛋糕">
+                            <div class="caption">抹茶古典蛋糕</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/拿破崙草莓千層.jpg" alt="拿破崙草莓千層">
+                            <div class="caption">拿破崙草莓千層</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/栗子蛋糕.jpg" alt="栗子蛋糕">
+                            <div class="caption">栗子蛋糕</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/法國小金桔果泥軟糖.jpg" alt="法國小金桔果泥軟糖">
+                            <div class="caption">法國小金桔果泥軟糖</div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-buttons">
+                        <button id="prevBtn1" aria-label="Previous Slide">&#10094;</button>
+                        <button id="nextBtn1" aria-label="Next Slide">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress progress-1"></div>
+                </div>
+            </div>
+
+            <a href="products.html" style="text-decoration: none;">
+                <button class="buynow2">立即購買</button>
+            </a>
+        </div>
+    </div> -->
+
+    <div class="slider-container slider1">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <!-- Individual Images with Text Overlay -->
+                <div class="slide">
+                    <img src="./Picture/可麗露.jpg" alt="可麗露">
+                    <div class="text-overlay">可麗露</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/咖哩麵包.jpg" alt="咖哩麵包">
+                    <div class="text-overlay">咖哩麵包</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/宇治抹茶馬卡餅.jpg" alt="宇治抹茶馬卡餅">
+                    <div class="text-overlay">宇治抹茶馬卡餅</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/巧克力熔岩塔.jpg" alt="巧克力熔岩塔">
+                    <div class="text-overlay">巧克力熔岩塔</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/抹茶古典蛋糕.jpg" alt="抹茶古典蛋糕">
+                    <div class="text-overlay">抹茶古典蛋糕</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/拿破崙草莓千層.jpg" alt="拿破崙草莓千層">
+                    <div class="text-overlay">拿破崙草莓千層</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/栗子蛋糕.jpg" alt="栗子蛋糕">
+                    <div class="text-overlay">栗子蛋糕</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/法國小金桔果泥軟糖.jpg" alt="法國小金桔果泥軟糖">
+                    <div class="text-overlay">法國小金桔果泥軟糖</div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <button class="nav-button left" onclick="moveSlider(-1, 'slider1')">&#9664;</button>
+        <button class="nav-button right" onclick="moveSlider(1, 'slider1')">&#9654;</button>
+        <!-- Indicator buttons -->
+        <div class="indicator">
+            <button class="indicator-button" onclick="setSlide(0, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(1, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(2, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(3, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(4, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(5, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(6, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(7, 'slider1')"></button>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="buttonContainer">
+        <a href="products.html" style="text-decoration: none;">
+            <button class="buynow2">立即購買</button>
+        </a>
+    </div>
+
+    <!-- -----------------------------------CAROUSEL---------------------------- -->
+
+    <div class="marquee-container">
+        <p id="marquee-text">甜品DIY，樂趣無窮！</p>
+    </div>
+
+    <!-- -----------------------------------CAROUSEL 2---------------------------- -->
+    <div class="subtitle">
+        <h2>10月甜點工作坊</h2>
+    </div>
+    <!-- <div class="container3">
+        <div class="content">
+            <div class="carousel-container">
+                <div class="carousel carousel-2">
+                    <div class="carousel-images carousel-images-2">
+                        
+                        <div class="carousel-item">
+                            <img src="./Picture/生巧克力磚.jpg" alt="生巧克力磚">
+                            <div class="caption">生巧克力磚</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/軟心蘭姆厚布朗尼.jpg" alt="軟心蘭姆厚布朗尼">
+                            <div class="caption">軟心蘭姆厚布朗尼</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/草莓塔.jpg" alt="草莓塔">
+                            <div class="caption">草莓塔</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Picture/桂花和果子.jpg" alt="桂花和果子">
+                            <div class="caption">桂花和果子</div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="carousel-buttons">
+                        <button id="prevBtn2" aria-label="Previous Slide">&#10094;</button>
+                        <button id="nextBtn2" aria-label="Next Slide">&#10095;</button>
+                    </div>
+                </div>
+
+                
+                <div class="progress-bar">
+                    <div class="progress progress-2"></div>
+                </div>
+            </div> -->
+    <div class="slider-container slider2">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <!-- Individual Images with Text Overlay -->
+                <div class="slide">
+                    <img src="./Picture/馬玲薯臘腸鹹派.jpg" alt="馬玲薯臘腸鹹派">
+                    <div class="text-overlay">馬玲薯臘腸鹹派</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/草莓塔.jpg" alt="草莓塔">
+                    <div class="text-overlay">草莓塔</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/生巧克力蝸牛包.jpg" alt="生巧克力蝸牛包">
+                    <div class="text-overlay">生巧克力蝸牛包</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/焦糖蘋果塔.jpg" alt="焦糖蘋果塔">
+                    <div class="text-overlay">焦糖蘋果塔</div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <button class="nav-button left" onclick="moveSlider(-1, 'slider2')">&#9664;</button>
+        <button class="nav-button right" onclick="moveSlider(1, 'slider2')">&#9654;</button>
+        <!-- Indicator buttons -->
+        <div class="indicator">
+            <button class="indicator-button" onclick="setSlide(0, 'slider2')"></button>
+            <button class="indicator-button" onclick="setSlide(1, 'slider2')"></button>
+            <button class="indicator-button" onclick="setSlide(2, 'slider2')"></button>
+            <button class="indicator-button" onclick="setSlide(3, 'slider2')"></button>
+        </div>
+    </div>
+
+    <div class="buttonContainer">
+        <a href="workshop.html" style="text-decoration: none;">
+            <button class="lessonnow">立即報名</button>
+        </a>
+    </div>
+    </div>
+    </div>
+
+    <!-- -------------------------------END OF CAROUSEL---------------------------------- -->
+
+    <div class="container4">
+        <div class="content">
+            <div class="subtitle">
+                <h2>我們的故事</h2>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Mw9qiV7XlFs"
+                    title="★ Cab ride 🇨🇭St. Moritz - 🇮🇹Tirano (Bernina pass), Switzerland to Italy [10.2019]"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="last-container">
+                <div class="lastimg">
+                    <img src="./Picture/軟心蘭姆厚布朗尼.jpg" alt="軟心蘭姆厚布朗尼">
+                </div>
+                <div class="aboutbox">
+                    <h4>食物不僅滋養著我們的胃，更撫慰著我們的心靈，這正是台灣美食的魅力所在-我們再此與全世界分享它的美好。</h4>
+                    <a href="about.html" style="text-decoration: none;">
+                        <button class="buynow">了解更多</button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Floating Button -->
+    <a href="/cart.html" class="floating-btn">
+        🛒
+    </a>
+    <!-- -------------------------------------footer----------------------------------------------- -->
+    <div class="footer">
+        <div class="footerbox">
+            <div>
+                <h3>波夏甜點店</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <div class="top">
+                        <li><a href="#" class="link" data-url="about.html">關於我們/產品</a></li>
+                        <li><a href="#" class="link" data-url="products.html">線上訂購</a></li>
+                    </div>
+                    <br>
+                    <li><a href="#" class="link" data-url="workshop.html">甜點工坊</a></li>
+                    <li><a href="#" class="link" data-url="contact.html">聯絡我們</a></li>
+                    <li><a href="#" class="link" data-url="faq.html">常見問題</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media-icons">
+                <a href="#" class="social" data-url="https://instagram.com">
+                    <i class="fab fa-instagram" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://facebook.com">
+                    <i class="fab fa-facebook" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://tiktok.com">
+                    <i class="fab fa-tiktok" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://linkedin.com">
+                    <i class="fab fa-linkedin" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://youtube.com">
+                    <i class="fab fa-youtube" style="font-size: 36px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="scriptrwd.js"></script>
+</body>
+
+
+</html>

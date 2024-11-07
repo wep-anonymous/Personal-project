@@ -15,7 +15,7 @@ document.querySelectorAll(".title-link").forEach((link) => {
     });
 });
 
-document.querySelectorAll(".nav-link").forEach((link) => {
+document.querySelectorAll(".navlink").forEach((link) => {
     link.addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
         const page = this.getAttribute("data-page"); // Get the page from data attribute

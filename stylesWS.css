@@ -48,13 +48,13 @@ body {
 }
 
 
-.nav-links {
+.navlinks {
     display: flex;
     align-items: baseline;
     padding-right: 10px;
 }
 
-.nav-link {
+.navlink {
     color: #fff;
     font-family: "Noto Sans TC";
     font-size: 16px;
@@ -67,7 +67,7 @@ body {
     /* Link color */
 }
 
-.nav-link:hover {
+.navlink:hover {
     color: #ddd;
 }
 

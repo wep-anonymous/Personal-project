@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    /* To position the curves absolutely */
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
+.content {
+    position: relative;
+    /* To keep content above the curves */
+    z-index: 1;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Define the repeating left curve */
+.curve-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    /* Adjust width as needed */
+    height: 100%;
+    /* Full height */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 600" fill="lightblue"><path d="M0,600 Q50,400 0,200 T0,0 V600 Z"/></svg>');
+    background-size: 100% 200px;
+    /* Adjust height of each repeat */
+    background-repeat: repeat-y;
+    /* Repeat vertically */
+}
+
+/* Define the repeating right curve */
+.curve-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    /* Adjust width as needed */
+    height: 100%;
+    /* Full height */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 600" fill="lightpink"><path d="M200,600 Q150,400 200,200 T200,0 V600 Z"/></svg>');
+    background-size: 100% 200px;
+    /* Adjust height of each repeat */
+    background-repeat: repeat-y;
+    /* Repeat vertically */
+}

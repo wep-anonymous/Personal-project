@@ -4,64 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesAbout.css">
-    <title>波夏甜點店</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>關於我們</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>$(document).ready(function () {
-            // Handle click events on footer links
-            $(".link").on("click", function (event) {
-                event.preventDefault(); // Prevent default link behavior
-                let url = $(this).data("url"); // Get the URL from the data attribute
-                window.location.href = url; // Redirect to the URL
-            });
+    <link rel="stylesheet" href="stylesAbout.css">
 
-            // Handle click events on social media icons
-            $(".social").on("click", function (event) {
-                event.preventDefault(); // Prevent default link behavior
-                let url = $(this).data("url"); // Get the URL from the data attribute
-                window.open(url, "_blank"); // Open the URL in a new tab
-            });
-        });</script>
 </head>
 
 <body>
-    <div class="banner">
-        <div class="title">
-            <a href="#" class="title-link" data-page="index.html">波夏甜點店</a>
+    <nav>
+        <div class="logoCake">
+            <a href="#" class="logo">波夏甜點店</a>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/cake.png" alt="cake" />
         </div>
-        <div class="nav-links">
-            <a href="#" class="nav-link" data-page="about.html">關於我們/產品</a>
-            <a href="#" class="nav-link" data-page="products.html">線上訂購</a>
-            <a href="#" class="nav-link" data-page="workshop.html">甜點工坊</a>
-            <a href="#" class="nav-link" data-page="contact.html">聯絡我們</a>
-            <a href="#" class="nav-link" data-page="faq.html">常見問題FAQ</a>
-            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
-            <a href="account.html" class="icon-link"><i class="fas fa-user"></i></a>
+        <ul class="navlist">
+            <li><a href="#" class="navlink">關於我們/產品</a></li>
+            <li><a href="#" class="navlink">線上訂購</a></li>
+            <li><a href="#" class="navlink">甜點工坊</a></li>
+            <li><a href="#" class="navlink">聯絡我們</a></li>
+            <li><a href="#" class="navlink">常見問題FAQ</a></li>
+            <li><a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="account.html" class="icon-link"><i class="fas fa-user"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
-    <!-- banner-------------------------------------------------------------- -->
+    </nav>
+    <!-------------------------------------------- banner-------------------------------------------------- -->
 
     <div class="wrapper">
-        <div class="subtitle">
-            <h2>關於我們</h2>
-        </div>
-
-        <div class="image-container">
-            <img src="/Picture/baked-bread-grilled-meat-homemade-dessert-plate-generated-by-ai.jpg"
-                alt="Background Image">
-            <div class="text-box">
-                最正宗的法式甜點<br>
-                最新鮮的台灣食材<br>
-                帶您直達法國南部的最佳風味
+        <div class="section1">
+            <div class="image-container">
+                <img src="/Picture/baked-bread-grilled-meat-homemade-dessert-plate-generated-by-ai.jpg"
+                    alt="Background Image">
+                <div class="text-box">
+                    最正宗的法式甜點<br>
+                    最新鮮的台灣食材<br>
+                    帶您直達法國南部的最佳風味
+                </div>
             </div>
         </div>
     </div>
 
+
     <div class="wrapper">
         <div class="subtitle">
-            <h2>歷史</h2>
+            <h2>關於我們的歷史</h2>
         </div>
         <div class="historybox">
             <div class="historytext">
@@ -76,57 +66,149 @@
 
     <div class="wrapper">
         <div class="subtitle">
-            <h2>關於食材</h2>
+            <h2>我們的食材</h2>
         </div>
 
         <div class="container">
+            <!-- Top Section -->
             <div class="top-section">
                 <img src="/Picture/irina-f9Zl30HswFw-unsplash.jpg" alt="Image 1" class="img1">
-                <div class="text1">帶來幸福<br>我們堅持使用最高品質的食材，確保每一個產品都充滿新鮮與美味，並且許多食材直接從台灣本地精選採購。/div>
+                <div class="text1">
+                    我們堅持使用最高品質的食材，<br>
+                    直接從台灣本地精選採，<br>
+                    確保每一個產品都充滿新鮮與美味。
                 </div>
-                <img src="/Picture/vuuit-EIcnMAtVSZM-unsplash.jpg" alt="Image 2" class="img2">
             </div>
+            <img src="/Picture/vuuit-EIcnMAtVSZM-unsplash.jpg" alt="Image 2" class="img2">
+
+            <!-- Bottom Section -->
+            <div class="bottom-section">
+                <img src="/Picture/anton-4BOnTOTWWZc-unsplash.jpg" alt="Image 3" class="img3">
+                <div class="text2">
+                    從天然的奶油到新鮮的水果，<br>
+                    我們只選用經過嚴格篩選的原料。<br>
+                    每一道烘焙工序都注重細節，<br>
+                    以保持食材的原始風味與營養。
+                </div>
+            </div>
+            <img src="/Picture/monika-grabkowska-B3ZHo7aoJEc-unsplash.jpg" alt="Image 4" class="img4">
         </div>
 
+    </div>
 
-        <!-- --------------------------------footer------------------------------ -->
-        <div class="footer">
-            <div class="footerbox">
-                <div>
-                    <h3>波夏甜點店</h3>
+    <div class="marquee-container">
+        <p id="marquee-text">立刻選購我們最新鮮食材製作的糕點</p>
+    </div>
+
+    <div class="slider-container slider1">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <!-- Individual Images with Text Overlay -->
+                <div class="slide">
+                    <img src="./Picture/可麗露.jpg" alt="可麗露">
+                    <div class="text-overlay">可麗露</div>
                 </div>
-                <div class="footer-links">
-                    <ul>
+                <div class="slide">
+                    <img src="./Picture/咖哩麵包.jpg" alt="咖哩麵包">
+                    <div class="text-overlay">咖哩麵包</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/宇治抹茶馬卡餅.jpg" alt="宇治抹茶馬卡餅">
+                    <div class="text-overlay">宇治抹茶馬卡餅</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/巧克力熔岩塔.jpg" alt="巧克力熔岩塔">
+                    <div class="text-overlay">巧克力熔岩塔</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/抹茶古典蛋糕.jpg" alt="抹茶古典蛋糕">
+                    <div class="text-overlay">抹茶古典蛋糕</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/拿破崙草莓千層.jpg" alt="拿破崙草莓千層">
+                    <div class="text-overlay">拿破崙草莓千層</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/栗子蛋糕.jpg" alt="栗子蛋糕">
+                    <div class="text-overlay">栗子蛋糕</div>
+                </div>
+                <div class="slide">
+                    <img src="./Picture/法國小金桔果泥軟糖.jpg" alt="法國小金桔果泥軟糖">
+                    <div class="text-overlay">法國小金桔果泥軟糖</div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <button class="nav-button left" onclick="moveSlider(-1, 'slider1')">&#9664;</button>
+        <button class="nav-button right" onclick="moveSlider(1, 'slider1')">&#9654;</button>
+        <!-- Indicator buttons -->
+        <div class="indicator">
+            <button class="indicator-button" onclick="setSlide(0, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(1, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(2, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(3, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(4, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(5, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(6, 'slider1')"></button>
+            <button class="indicator-button" onclick="setSlide(7, 'slider1')"></button>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="buttonContainer">
+        <a href="products.html" style="text-decoration: none;">
+            <button class="buynow2">立即購買</button>
+        </a>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------ -->
+
+    <!-- Floating Button -->
+    <a href="/cart.html" class="floating-btn">
+        🛒
+    </a>
+    <!-- -------------------------------------footer----------------------------------------------- -->
+    <div class="footer">
+        <div class="footerbox">
+            <div>
+                <h3>波夏甜點店</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <div class="top">
                         <li><a href="#" class="link" data-url="about.html">關於我們/產品</a></li>
                         <li><a href="#" class="link" data-url="products.html">線上訂購</a></li>
-                        <br>
-                        <li><a href="#" class="link" data-url="workshop.html">甜點工坊</a></li>
-                        <li><a href="#" class="link" data-url="contact.html">聯絡我們</a></li>
-                        <li><a href="#" class="link" data-url="faq.html">常見問題</a></li>
-                    </ul>
-                </div>
+                    </div>
+                    <br>
+                    <li><a href="#" class="link" data-url="workshop.html">甜點工坊</a></li>
+                    <li><a href="#" class="link" data-url="contact.html">聯絡我們</a></li>
+                    <li><a href="#" class="link" data-url="faq.html">常見問題</a></li>
+                </ul>
+            </div>
 
-                <div class="social-media-icons">
-                    <a href="#" class="social" data-url="https://instagram.com">
-                        <i class="fab fa-instagram" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://facebook.com">
-                        <i class="fab fa-facebook" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://tiktok.com">
-                        <i class="fab fa-tiktok" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://linkedin.com">
-                        <i class="fab fa-linkedin" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://youtube.com">
-                        <i class="fab fa-youtube" style="font-size: 36px;"></i>
-                    </a>
-                </div>
+            <div class="social-media-icons">
+                <a href="#" class="social" data-url="https://instagram.com">
+                    <i class="fab fa-instagram" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://facebook.com">
+                    <i class="fab fa-facebook" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://tiktok.com">
+                    <i class="fab fa-tiktok" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://linkedin.com">
+                    <i class="fab fa-linkedin" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://youtube.com">
+                    <i class="fab fa-youtube" style="font-size: 36px;"></i>
+                </a>
             </div>
         </div>
     </div>
-    <script src="scriptAbout.js"></script> <!-- Link to your JavaScript file -->
+
+
+
+    <script src="scriptAbout.js"></script>
 </body>
 
 </html>

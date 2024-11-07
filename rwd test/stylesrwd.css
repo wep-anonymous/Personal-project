@@ -1,0 +1,1159 @@
+.slider-container {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    overflow: hidden;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 10px;
+    /* Adjust for vertical top position */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    color: white;
+    font-size: 24px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Add a shadow to improve text visibility */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for visibility */
+}
+
+.text-overlay.active {
+    opacity: 1;
+}
+
+/* Navigation buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transform: translateY(-50%);
+    z-index: 20;
+    /* Ensure the buttons are above everything else */
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Indicator styling */
+.indicator {
+    text-align: center;
+    margin-top: 10px;
+    z-index: 20;
+    /* Ensure the indicators are above everything else */
+}
+
+.indicator-button {
+    border: none;
+    background: #ccc;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator-button.active {
+    background: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #efd9c7;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 480px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------nav------------------------------------------ */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b3c46;
+    color: #fff;
+    padding: 10px;
+    height: 80px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav .logoCake {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav .logo:hover {
+    color: yellow;
+}
+
+nav .navlist {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    float: right;
+}
+
+.navlink {
+    margin: 0 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    color: yellow;
+}
+
+.icon-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navlink,
+.icon-link,
+.logo {
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+.icon-link:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+}
+
+.hamburger {
+    display: none;
+    /* Hidden on desktop by default */
+    flex-direction: column;
+    justify-content: center;
+    /* Center the hamburger bars vertically */
+    align-items: center;
+    /* Center the hamburger bars horizontally */
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: #ffffff;
+    transform-origin: left center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* Toggle hamburger icon when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* ----------------------------------------nav--------------------------------------------- */
+
+.main-content {
+    position: relative;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center content horizontally */
+    height: auto;
+    /* Full height of the viewport */
+    width: 100%;
+    /* Full width of the viewport */
+    position: relative;
+    /* Establish a positioning context */
+    top: 80px;
+}
+
+.bird {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center-align text */
+    margin-top: 20px;
+    /* Add space above text */
+}
+
+.text-container p {
+    width: auto;
+    max-width: 662px;
+    /* Limits width for readability */
+    color: #fff;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    /* Center-align paragraph text */
+}
+
+.buynow {
+    display: flex;
+    width: 271px;
+    height: 133px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    border: 1px solid #d9718A;
+    background: #d9718A;
+    color: #fff;
+    font-family: "Noto Sans TC";
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4.8px;
+    flex-wrap: nowrap;
+}
+
+.buynow:hover {
+    color: #ddd;
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.buynow2 {
+    display: flex;
+    width: 271px;
+    height: 133px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    border: 1px solid #d9718A;
+    background: #d9718A;
+    color: #fff;
+    font-family: "Noto Sans TC";
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4.8px;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.buynow2:hover {
+    color: #ddd;
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.lessonnow {
+    display: flex;
+    width: 271px;
+    height: 133px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    border: 1px solid #d9718A;
+    background: #d9718A;
+    color: #fff;
+    font-family: "Noto Sans TC";
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4.8px;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.lessonnow:hover {
+    color: #ddd;
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.buttonContainer {
+    max-width: 271px;
+    margin: auto;
+}
+
+/* -----------------------------------section 1---------------------------------------- */
+
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    /* Adjust width as needed */
+    white-space: nowrap;
+    background-color: #efd9c7;
+    color: #d8a084;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: Inter, sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: normal;
+    margin: 10px 0;
+    margin-bottom: 33px;
+    height: 87px;
+    margin-top: 20px;
+    /* Space between button and marquee */
+    clear: both;
+}
+
+#marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    /* Start off-screen */
+    animation: marquee 14s linear infinite;
+
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* -----------------------------------section 2------------------------------------- */
+
+.subtitle {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #efd9c7;
+    background: #efd9c7;
+    color: #fff;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 23px;
+    /* Add space below the subtitle */
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+    /* background-color: #eaaa9a; */
+}
+
+/* Carousel container */
+.carousel-container {
+    width: 1000px;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.carousel-images {
+    display: flex;
+    width: calc(500px * 9);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: 500px;
+    height: 300px;
+    position: relative;
+}
+
+.carousel-item caption {
+    font: 16px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Button positioning */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+/* Progress bar styles */
+.progress-bar {
+    max-width: 1000px;
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    margin-top: 10px;
+    margin-bottom: 23px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #76c7c0;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.container4 {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 34px;
+    margin-bottom: 0;
+}
+
+.video-container {
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutbutton {
+    display: flex;
+    width: 271px;
+    height: 133px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 29px;
+    border: 1px solid #802812;
+    background: #802812;
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Sans TC";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.8px;
+}
+
+.aboutbutton:hover {
+    color: #ddd;
+    cursor: pointer;
+}
+
+.aboutbox h4 {
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35%;
+    width: 70%;
+    font-size: 24px;
+    color: white;
+}
+
+.last-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.aboutbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 483.834px;
+    /* Adjust height as needed */
+    text-align: center;
+    /* Centers the text inside the h4 */
+}
+
+.lastimg {
+    width: 541px;
+    height: 483.834px;
+    flex-shrink: 0;
+}
+
+.lastimg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Floating button styling */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.floating-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Cart icon (optional, can use Font Awesome or custom SVG) */
+.floating-btn i {
+    font-size: 24px;
+}
+
+/* -----------------------footer---------------------- */
+
+.footer {
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #8B3C46;
+    text-align: center;
+}
+
+.footerbox {
+    margin: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.footerbox h3 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes padding */
+    margin: 0;
+    /* Removes margin */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.footer-links li {
+    display: inline-block;
+    /* Displays list items in a row */
+    margin: 0 10px;
+    /* Adds margin between links */
+    text-align: left;
+}
+
+.footer-links a {
+    color: #fff;
+    /* White color for links */
+    text-decoration: none;
+    /* Removes underline from links */
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.footer-links a:hover {
+    color: yellow;
+    /* Underline on hover */
+}
+
+.social-media-icons a {
+    margin: 0 30px;
+    /* Adds margin between icons */
+}
+
+.social-media-icons i {
+    font-size: 48px;
+    /* Set icon size to 36px */
+    color: white;
+    /* Change icon color to white */
+}
+
+.social-media-icons a:hover i {
+    color: yellow;
+    /* Change color on hover to a lighter shade */
+}
+
+.top {
+    justify-content: space-between;
+}
+
+/* ----------------------------------480 burger------------------------------------------ */
+
+/* --------------------------------------768 burger-------------------------------------------------- */
+
+/* Mobile view adjustments */
+@media screen and (max-width:868px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav .navlist {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+
+        top: 80px;
+        left: 0;
+        background-color: #393939;
+        display: none;
+        justify-content: flex;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav .navlist.active {
+        display: flex;
+        /* justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px; */
+    }
+
+    .navlink,
+    .icon-link {
+
+        font-size: 18px;
+        /* Consistent font size */
+        color: white;
+        /* Uniform text color */
+
+        /* Consistent padding */
+        width: 100%;
+        /* Ensure links occupy full width */
+        text-align: center;
+        /* Center text within each link */
+
+    }
+
+    .navlink:hover {
+        color: #ffcc00;
+        /* Yellow color on hover */
+    }
+
+    .image-container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center content */
+        top: 20px;
+        /* Adjust top spacing */
+    }
+
+    .text-container {
+        margin-top: 10px;
+        /* Reduce margin for smaller screens */
+        padding: 0 15px;
+        /* Add some padding for readability */
+    }
+
+    .text-container p {
+        font-size: 20px;
+        /* Decrease font size for smaller screens */
+        max-width: 100%;
+        /* Allow text to fill more of the screen */
+    }
+
+    .buynow {
+        width: 100%;
+        /* Make button width responsive */
+        font-size: 24px;
+        /* Adjust button text size */
+        height: auto;
+        /* Let the button height adjust */
+        flex-wrap: nowrap;
+
+    }
+
+    .marquee-container {
+        font-size: 24px;
+        /* Decrease font size for marquee text */
+        height: 60px;
+        /* Adjust height for smaller screens */
+    }
+
+    /* -------------------------------------------------------------------- */
+    .subtitle {
+        font-size: 20px;
+        /* Smaller subtitle font size */
+        height: auto;
+        /* Allow height to adjust */
+        padding: 10px 0;
+        /* Add some padding */
+    }
+
+    .container2 {
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 34px;
+    }
+
+    .content {
+        text-align: center;
+        margin: auto;
+    }
+
+    /* Carousel container */
+    .carousel-container {
+        width: 100%;
+        position: relative;
+        margin: auto;
+        z-index: 0;
+    }
+
+    .carousel {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        /* Set to full width to make sure it works responsively */
+    }
+
+    .carousel-item {
+        flex-shrink: 0;
+        width: 100%;
+        /* Full width for one image */
+        height: 300px;
+        /* Fixed height */
+        position: relative;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        /* Make image responsive */
+        height: 100%;
+        /* Maintain aspect ratio */
+        object-fit: cover;
+        /* Cover to maintain aspect ratio */
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Button positioning */
+    .carousel-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .carousel-buttons button:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
+
+    /* Progress bar styles */
+    .progress-bar {
+        max-width: 100%;
+        width: 100%;
+        height: 10px;
+        background-color: #eee;
+        margin-top: 10px;
+        margin-bottom: 23px;
+    }
+
+    .progress {
+        height: 100%;
+        background-color: #76c7c0;
+        width: 0%;
+        transition: width 0.5s ease-in-out;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* -------------------------video-------------------------------------- */
+
+    .container4 {
+        max-width: 1200px;
+        /* Set a max width for larger screens */
+        margin: auto;
+        /* Center the container */
+        padding: 20px;
+        /* Add some padding for aesthetic spacing */
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        /* Stack children vertically */
+        align-items: center;
+        /* Center content horizontally */
+        width: 100%;
+        /* Full width */
+    }
+
+    .subtitle {
+        margin-bottom: 20px;
+        /* Spacing between subtitle and video */
+    }
+
+    .video-container {
+        width: 100%;
+        /* Make video full width */
+        height: 0;
+        /* Set to zero and use padding for responsive aspect ratio */
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio (9/16 * 100) */
+        position: relative;
+        /* Position relative for iframe */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        /* Position iframe absolutely within its container */
+        top: 0;
+        /* Align to the top */
+        left: 0;
+        /* Align to the left */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+    }
+
+    .last-container {
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: column;
+        /* Stack content vertically */
+        align-items: center;
+        /* Center content */
+        width: 100%;
+        /* Full width */
+        margin-top: 20px;
+        /* Spacing above the last container */
+    }
+
+    .aboutbox {
+        width: 90%;
+        /* Adjust about box width */
+        text-align: center;
+        /* Center text */
+        padding: 0%;
+        margin: 0;
+    }
+
+    .lastimg {
+        width: 100%;
+        /* Adjust last image to full width */
+        height: auto;
+        /* Allow height to adjust */
+        min-width: 453px;
+    }
+
+    /* ----------------------------------slider-------------------------- */
+
+    .slider-container {
+        position: relative;
+        width: 50%;
+        /* Adjust as per your need */
+        height: 500px;
+        /* Adjust as per your need */
+        overflow: hidden;
+        margin: auto;
+    }
+
+    /* Wrapper for slider content */
+    .slider-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /* Ensure only the images inside the slider move */
+    }
+
+    /* The slider holding all images, will slide horizontally */
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+        /* Make sure it's 100% width */
+    }
+
+    /* Individual slides inside the slider */
+    .slide {
+        width: 100%;
+        /* Each image takes up 100% of the container */
+        flex-shrink: 0;
+        /* Prevent images from shrinking */
+        height: 100%;
+    }
+
+    /* Ensure images fit inside their container */
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Ensures aspect ratio is maintained */
+    }
+
+    /* Adjust indicator styles */
+    .indicator {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .indicator-button {
+        border: none;
+        background: #ccc;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .indicator-button.active {
+        background: #333;
+    }
+
+    /* ------------------------------------------------------------------------------- */
+
+    .floating-btn {
+        width: 50px;
+        /* Adjust size of the floating button */
+        height: 50px;
+        /* Adjust size */
+        font-size: 20px;
+        /* Smaller icon size */
+    }
+
+    /* --------------------------------footer--------------------- */
+    .footer {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+        flex-direction: column;
+        /* Stack everything vertically */
+        justify-content: flex-start;
+        /* Align elements to the top */
+    }
+
+    .footerbox {
+        width: 100%;
+        align-items: center;
+        /* Center the content inside the box */
+    }
+
+    .footerbox h3 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+        text-align: center;
+        /* Keep links centered */
+        display: flex;
+        flex-direction: column;
+        /* Stack links vertically in RWD */
+        align-items: center;
+        /* Center the links */
+        margin-top: 20px;
+        /* Add space above the links */
+    }
+
+    .footer-links li {
+        margin: 10px 0;
+    }
+
+    .footer-links a {
+        font-size: 24px;
+    }
+
+    /* Specifically target the .top div in RWD */
+    .top {
+        display: flex;
+        flex-direction: column;
+        /* Stack the links vertically in RWD */
+        align-items: center;
+        /* Center the links */
+        margin-bottom: 20px;
+        /* Space between the links and next content */
+    }
+
+    .social-media-icons {
+        width: 100%;
+        justify-content: center;
+        /* Center social icons */
+        margin-top: 20px;
+    }
+
+    .social-media-icons a {
+        margin: 0 15px;
+    }
+
+    .social-media-icons i {
+        font-size: 36px;
+    }
+}
