@@ -79,18 +79,10 @@ window.addEventListener('resize', () => {
 });
 
 // ---------------------------------------------------------------------------
-document.querySelectorAll(".title-link").forEach((link) => {
-    link.addEventListener("click", function (e) {
-        // e.preventDefault(); // Prevent the default anchor behavior
-        const page = this.getAttribute("data-page"); // Get the page from data attribute
-        window.location.href = page; // Navigate to the specified page
-    });
-});
-
 document.querySelectorAll(".navlink").forEach((link) => {
     link.addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
-        const page = this.getAttribute("data-page"); // Get the page from data attribute
+        const page = this.getAttribute("href"); // Get the page from href attribute
         window.location.href = page; // Navigate to the specified page
     });
 });

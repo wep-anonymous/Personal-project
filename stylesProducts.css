@@ -54,7 +54,16 @@ nav .navlist {
     list-style: none;
     margin: 0;
     display: flex;
+    /* Set display to flex for larger screens */
     float: right;
+    flex-direction: row;
+    /* Ensure horizontal layout in larger screens */
+    position: static;
+    /* Reset to static position */
+    width: auto;
+    /* Reset width for larger screens */
+    background-color: transparent;
+    /* Background only for mobile view */
 }
 
 .navlink {
@@ -338,11 +347,11 @@ nav .navlist {
     position: absolute;
     width: 100%;
     height: calc(100vh - 80px);
-
     top: 80px;
     left: 0;
     background-color: #393939;
     display: none;
+    /* Hide by default in mobile view */
     justify-content: flex;
     align-items: center;
     z-index: 1000;

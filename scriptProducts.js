@@ -61,14 +61,7 @@ window.addEventListener('resize', () => {
 
 
 
-// Close the nav and overlay when the overlay itself is clicked
-// overlay.addEventListener('click', () => {
-//     hamburger.classList.remove('active');
-//     navlist.classList.remove('active');
-//     overlay.classList.remove('active');
-// });
 
-// Ensure correct icon display on window resize
 window.addEventListener('resize', () => {
     if (window.innerWidth > 868) {
         iconLinks.forEach(link => {
@@ -79,22 +72,13 @@ window.addEventListener('resize', () => {
 });
 
 // ---------------------------------------------------------------------------
-document.querySelectorAll(".title-link").forEach((link) => {
-    link.addEventListener("click", function (e) {
-        // e.preventDefault(); // Prevent the default anchor behavior
-        const page = this.getAttribute("data-page"); // Get the page from data attribute
-        window.location.href = page; // Navigate to the specified page
-    });
-});
-
 document.querySelectorAll(".navlink").forEach((link) => {
     link.addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
-        const page = this.getAttribute("data-page"); // Get the page from data attribute
+        const page = this.getAttribute("href"); // Get the page from href attribute
         window.location.href = page; // Navigate to the specified page
     });
 });
-
 
 
 // ----------------------------banner--------------------------------
