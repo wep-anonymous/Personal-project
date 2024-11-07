@@ -194,6 +194,24 @@ nav .navlist {
     margin: auto;
 }
 
+.buynow4 {
+    display: flex;
+    width: 271px;
+    height: 133px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    border: 1px solid #d9718A;
+    background: #d9718A;
+    color: #fff;
+    font-family: "Noto Sans TC";
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4.8px;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
 .buynow:hover {
     color: #ddd;
     cursor: pointer;
