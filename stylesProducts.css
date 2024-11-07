@@ -54,16 +54,7 @@ nav .navlist {
     list-style: none;
     margin: 0;
     display: flex;
-    /* Set display to flex for larger screens */
     float: right;
-    flex-direction: row;
-    /* Ensure horizontal layout in larger screens */
-    position: static;
-    /* Reset to static position */
-    width: auto;
-    /* Reset width for larger screens */
-    background-color: transparent;
-    /* Background only for mobile view */
 }
 
 .navlink {
@@ -133,7 +124,6 @@ nav .navlist {
 }
 
 /* ----------------------------------------nav--------------------------------------------- */
-
 .subtitle {
     display: flex;
     width: 100%;
@@ -210,10 +200,7 @@ nav .navlist {
     font-size: 24px;
 }
 
-
-
-
-/* ------------------------------------floating button----------------------------- */
+/* --------------------------------------------------------------------------- */
 
 /* Floating button styling */
 .floating-btn {
@@ -333,142 +320,340 @@ nav .navlist {
 
 /* Mobile view adjustments */
 @media screen and (max-width:868px) {
-    .product-item img {
-        height: 10rem;
+    .hamburger {
+        display: flex;
     }
-}
 
-.hamburger {
-    display: flex;
-}
-
-nav .navlist {
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 80px);
-    top: 80px;
-    left: 0;
-    background-color: #393939;
-    display: none;
-    /* Hide by default in mobile view */
-    justify-content: flex;
-    align-items: center;
-    z-index: 1000;
-}
-
-nav .navlist.active {
-    display: flex;
-    /* justify-content: flex-start;
+    nav .navlist {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+        top: 80px;
+        left: 0;
+        background-color: #393939;
+        display: none;
+        justify-content: flex-start;
         align-items: center;
-        padding-top: 50px; */
-}
+        z-index: 1000;
+        padding-top: 50px;
+    }
 
-.navlink,
-.icon-link {
+    nav .navlist.active {
+        display: flex;
+    }
 
-    font-size: 18px;
-    /* Consistent font size */
-    color: white;
-    /* Uniform text color */
+    .navlink,
+    .icon-link {
+        font-size: 18px;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
 
-    /* Consistent padding */
-    width: 100%;
-    /* Ensure links occupy full width */
-    text-align: center;
-    /* Center text within each link */
+    .navlink:hover {
+        color: #ffcc00;
+    }
 
-}
+    .image-container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center content */
+        top: 20px;
+        /* Adjust top spacing */
+    }
 
-.navlink:hover {
-    color: #ffcc00;
-    /* Yellow color on hover */
-}
+    .text-container {
+        margin-top: 10px;
+        /* Reduce margin for smaller screens */
+        padding: 0 15px;
+        /* Add some padding for readability */
+    }
 
-/* -------------------------------------------------------------------------------- */
+    .text-container p {
+        font-size: 20px;
+        /* Decrease font size for smaller screens */
+        max-width: 100%;
+        /* Allow text to fill more of the screen */
+    }
+
+    .buynow {
+        width: 100%;
+        /* Make button width responsive */
+        font-size: 24px;
+        /* Adjust button text size */
+        height: auto;
+        /* Let the button height adjust */
+        flex-wrap: nowrap;
+
+    }
+
+    .buynow2 {
+        width: 100%;
+        /* Make button width responsive */
+        font-size: 24px;
+        /* Adjust button text size */
+        height: auto;
+        /* Let the button height adjust */
+        flex-wrap: nowrap;
+
+    }
+
+    .lessonnow {
+        width: 100%;
+        /* Make button width responsive */
+        font-size: 24px;
+        /* Adjust button text size */
+        height: auto;
+        /* Let the button height adjust */
+        flex-wrap: nowrap;
+
+    }
+
+    .marquee-container {
+        font-size: 24px;
+        /* Decrease font size for marquee text */
+        height: 60px;
+        /* Adjust height for smaller screens */
+    }
+
+    /* -------------------------------------------------------------------- */
+    .subtitle {
+        font-size: 20px;
+        /* Smaller subtitle font size */
+        height: auto;
+        /* Allow height to adjust */
+        padding: 10px 0;
+        /* Add some padding */
+    }
 
 
+    /* -------------------------video-------------------------------------- */
 
+    .container4 {
+        max-width: 1200px;
+        /* Set a max width for larger screens */
+        margin: auto;
+        /* Center the container */
+        padding: 20px;
+        /* Add some padding for aesthetic spacing */
+    }
 
+    .content {
+        display: flex;
+        flex-direction: column;
+        /* Stack children vertically */
+        align-items: center;
+        /* Center content horizontally */
+        width: 100%;
+        /* Full width */
+    }
 
-/* ------------------------------------------------------------------------------- */
+    .subtitle {
+        margin-bottom: 20px;
+        /* Spacing between subtitle and video */
+    }
 
-.floating-btn {
-    width: 50px;
-    /* Adjust size of the floating button */
-    height: 50px;
-    /* Adjust size */
-    font-size: 20px;
-    /* Smaller icon size */
-}
+    .video-container {
+        width: 100%;
+        /* Make video full width */
+        height: 0;
+        /* Set to zero and use padding for responsive aspect ratio */
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio (9/16 * 100) */
+        position: relative;
+        /* Position relative for iframe */
+    }
 
-/* --------------------------------footer--------------------- */
-.footer {
-    width: 100%;
-    /* Ensure it fills the entire width */
-    padding: 20px;
-    height: auto;
-    /* Remove fixed height so it can shrink */
-    flex-direction: column;
-    /* Stack everything vertically */
-    justify-content: flex-start;
-    /* Align elements to the top */
-}
+    .video-container iframe {
+        position: absolute;
+        /* Position iframe absolutely within its container */
+        top: 0;
+        /* Align to the top */
+        left: 0;
+        /* Align to the left */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+    }
 
-.footerbox {
-    width: 100%;
-    align-items: center;
-    /* Center the content inside the box */
-}
+    .last-container {
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: column;
+        /* Stack content vertically */
+        align-items: center;
+        /* Center content */
+        width: 100%;
+        /* Full width */
+        margin-top: 20px;
+        /* Spacing above the last container */
+    }
 
-.footerbox h3 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
+    .aboutbox {
+        width: 90%;
+        /* Adjust about box width */
+        text-align: center;
+        /* Center text */
+        padding: 0%;
+        margin: 0;
+    }
 
-.footer-links ul {
-    text-align: center;
-    /* Keep links centered */
-    display: flex;
-    flex-direction: column;
-    /* Stack links vertically in RWD */
-    align-items: center;
-    /* Center the links */
-    margin-top: 20px;
-    /* Add space above the links */
-}
+    .lastimg {
+        width: 100%;
+        /* Adjust last image to full width */
+        height: auto;
+        /* Allow height to adjust */
+        min-width: 453px;
+    }
 
-.footer-links li {
-    margin: 10px 0;
-}
+    /* ----------------------------------slider-------------------------- */
 
-.footer-links a {
-    font-size: 24px;
-}
+    .slider-container {
+        position: relative;
+        width: 50%;
+        /* Adjust as per your need */
+        height: 500px;
+        /* Adjust as per your need */
+        overflow: hidden;
+        margin: auto;
+    }
 
-/* Specifically target the .top div in RWD */
-.top {
-    display: flex;
-    flex-direction: column;
-    /* Stack the links vertically in RWD */
-    align-items: center;
-    /* Center the links */
-    margin-bottom: 20px;
-    /* Space between the links and next content */
-}
+    /* Wrapper for slider content */
+    .slider-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /* Ensure only the images inside the slider move */
+    }
 
-.social-media-icons {
-    width: 100%;
-    justify-content: center;
-    /* Center social icons */
-    margin-top: 20px;
-}
+    /* The slider holding all images, will slide horizontally */
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+        /* Make sure it's 100% width */
+    }
 
-.social-media-icons a {
-    margin: 0 15px;
-}
+    /* Individual slides inside the slider */
+    .slide {
+        width: 100%;
+        /* Each image takes up 100% of the container */
+        flex-shrink: 0;
+        /* Prevent images from shrinking */
+        height: 100%;
+    }
 
-.social-media-icons i {
-    font-size: 36px;
-}
+    /* Ensure images fit inside their container */
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Ensures aspect ratio is maintained */
+    }
+
+    /* Adjust indicator styles */
+    .indicator {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .indicator-button {
+        border: none;
+        background: #ccc;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .indicator-button.active {
+        background: #333;
+    }
+
+    /* ------------------------------------------------------------------------------- */
+
+    .floating-btn {
+        width: 50px;
+        /* Adjust size of the floating button */
+        height: 50px;
+        /* Adjust size */
+        font-size: 20px;
+        /* Smaller icon size */
+    }
+
+    /* --------------------------------footer--------------------- */
+    .footer {
+        width: 100%;
+        /* Ensure it fills the entire width */
+        padding: 20px;
+        height: auto;
+        /* Remove fixed height so it can shrink */
+        flex-direction: column;
+        /* Stack everything vertically */
+        justify-content: flex-start;
+        /* Align elements to the top */
+    }
+
+    .footerbox {
+        width: 100%;
+        align-items: center;
+        /* Center the content inside the box */
+    }
+
+    .footerbox h3 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+        text-align: center;
+        /* Keep links centered */
+        display: flex;
+        flex-direction: column;
+        /* Stack links vertically in RWD */
+        align-items: center;
+        /* Center the links */
+        margin-top: 20px;
+        /* Add space above the links */
+    }
+
+    .footer-links li {
+        margin: 10px 0;
+    }
+
+    .footer-links a {
+        font-size: 24px;
+    }
+
+    /* Specifically target the .top div in RWD */
+    .top {
+        display: flex;
+        flex-direction: column;
+        /* Stack the links vertically in RWD */
+        align-items: center;
+        /* Center the links */
+        margin-bottom: 20px;
+        /* Space between the links and next content */
+    }
+
+    .social-media-icons {
+        width: 100%;
+        justify-content: center;
+        /* Center social icons */
+        margin-top: 20px;
+    }
+
+    .social-media-icons a {
+        margin: 0 15px;
+    }
+
+    .social-media-icons i {
+        font-size: 36px;
+    }
 }

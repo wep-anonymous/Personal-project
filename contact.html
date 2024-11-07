@@ -4,31 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>波夏甜點店</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>首頁</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="stylesContact.css">
+
 </head>
 
 <body>
-    <div class="banner">
-        <div class="title">
-            <a href="#" class="title-link" data-page="index.html">波夏甜點店</a>
+    <nav>
+        <div class="logoCake">
+            <a href="index.html" class="logo">波夏甜點店</a>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/cake.png" alt="cake" />
         </div>
-        <div class="navlinks">
-            <a href="#" class="navlink" data-page="about.html">關於我們/產品</a>
-            <a href="#" class="navlink" data-page="products.html">線上訂購</a>
-            <a href="#" class="navlink" data-page="workshop.html">甜點工坊</a>
-            <a href="#" class="navlink" data-page="contact.html">聯絡我們</a>
-            <a href="#" class="navlink" data-page="faq.html">常見問題FAQ</a>
-            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
-            <a href="account.html" class="icon-link"><i class="fas fa-user"></i></a>
+        <ul class="navlist">
+            <li><a href="about.html" class="navlink">關於我們/產品</a></li>
+            <li><a href="products.html" class="navlink">線上訂購</a></li>
+            <li><a href="workshop.html" class="navlink">甜點工坊</a></li>
+            <li><a href="contact.html" class="navlink">聯絡我們</a></li>
+            <li><a href="faq.html" class="navlink">常見問題FAQ</a></li>
+            <li><a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="account.html" class="icon-link"><i class="fas fa-user"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
+    </nav>
 
 
-    <!-- Container 3: Second Carousel -->
     <div class="wrapper">
         <div class="container3">
             <div class="content">
@@ -36,15 +41,37 @@
                     <h4 class="titlebox">聯絡我們</h4>
                 </div>
                 <div class="subtitle">
-                    <h2>聯絡我們</h2>
+                    <h2></h2>
                 </div>
-
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">姓名:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">電子郵件:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">發送</button>
+                </form>
+                <div class="success-message hidden">
+                    感謝您的來訊！我們將盡快回覆您。
+                </div>
             </div>
         </div>
     </div>
 
 
 
+    <!-- Floating Button -->
+    <a href="/cart.html" class="floating-btn">
+        🛒
+    </a>
+    <!-- -------------------------------------footer----------------------------------------------- -->
     <div class="footer">
         <div class="footerbox">
             <div>
@@ -52,12 +79,14 @@
             </div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="#" class="link" data-url="about.html">關於我們/產品</a></li>
-                    <li><a href="#" class="link" data-url="products.html">線上訂購</a></li>
+                    <div class="top">
+                        <li><a href="about.html" class="link" data-url="about.html">關於我們/產品</a></li>
+                        <li><a href="products.html" class="link" data-url="products.html">線上訂購</a></li>
+                    </div>
                     <br>
-                    <li><a href="#" class="link" data-url="workshop.html">甜點工坊</a></li>
-                    <li><a href="#" class="link" data-url="contact.html">聯絡我們</a></li>
-                    <li><a href="#" class="link" data-url="faq.html">常見問題</a></li>
+                    <li><a href="workshop.html" class="link" data-url="workshop.html">甜點工坊</a></li>
+                    <li><a href="contact.html" class="link" data-url="contact.html">聯絡我們</a></li>
+                    <li><a href="faq.html" class="link" data-url="faq.html">常見問題</a></li>
                 </ul>
             </div>
 
@@ -80,8 +109,11 @@
             </div>
         </div>
     </div>
-    </div>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+
+
+
+    <script src="scriptContact.js"></script>
 </body>
+
 
 </html>

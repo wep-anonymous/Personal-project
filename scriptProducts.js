@@ -41,7 +41,7 @@ function toggleMenu() {
         iconLinks.forEach(link => {
             link.style.display = 'inline-block';  // Restore original icon links
         });
-
+        // Optionally, you can remove the dynamic links when closing the menu
         const dynamicLinks = navlist.querySelectorAll('.dynamic-navlink');
         dynamicLinks.forEach(link => link.remove());
     }
@@ -61,7 +61,14 @@ window.addEventListener('resize', () => {
 
 
 
+// Close the nav and overlay when the overlay itself is clicked
+// overlay.addEventListener('click', () => {
+//     hamburger.classList.remove('active');
+//     navlist.classList.remove('active');
+//     overlay.classList.remove('active');
+// });
 
+// Ensure correct icon display on window resize
 window.addEventListener('resize', () => {
     if (window.innerWidth > 868) {
         iconLinks.forEach(link => {
@@ -71,7 +78,6 @@ window.addEventListener('resize', () => {
     }
 });
 
-// ---------------------------------------------------------------------------
 document.querySelectorAll(".navlink").forEach((link) => {
     link.addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
@@ -79,7 +85,6 @@ document.querySelectorAll(".navlink").forEach((link) => {
         window.location.href = page; // Navigate to the specified page
     });
 });
-
 
 // ----------------------------banner--------------------------------
 

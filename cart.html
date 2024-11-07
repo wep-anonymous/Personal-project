@@ -4,28 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesCart.css">
     <title>波夏甜點店</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="stylesCart.css">
+
 </head>
 
 <body>
-    <div class="banner">
-        <div class="title">
-            <a href="#" class="title-link" data-page="index.html">波夏甜點店</a>
+    <nav>
+        <div class="logoCake">
+            <a href="index.html" class="logo">波夏甜點店</a>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/cake.png" alt="cake" />
         </div>
-        <div class="navlinks">
-            <a href="#" class="navlink" data-page="about.html">關於我們/產品</a>
-            <a href="#" class="navlink" data-page="products.html">線上訂購</a>
-            <a href="#" class="navlink" data-page="workshop.html">甜點工坊</a>
-            <a href="#" class="navlink" data-page="contact.html">聯絡我們</a>
-            <a href="#" class="navlink" data-page="faq.html">常見問題FAQ</a>
-            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
-            <a href="account.html" class="icon-link"><i class="fas fa-user"></i></a>
+        <ul class="navlist">
+            <li><a href="about.html" class="navlink">關於我們/產品</a></li>
+            <li><a href="products.html" class="navlink">線上訂購</a></li>
+            <li><a href="workshop.html" class="navlink">甜點工坊</a></li>
+            <li><a href="contact.html" class="navlink">聯絡我們</a></li>
+            <li><a href="faq.html" class="navlink">常見問題FAQ</a></li>
+            <li><a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="account.html" class="icon-link"><i class="fas fa-user"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
+    </nav>
+
     <div class="wrapper">
         <div class="cart-container">
             <h2>購物車</h2>
@@ -68,44 +75,51 @@
 
             <button class="checkout-button">結帳</button>
         </div>
+    </div>
 
-        <div class="footer">
-            <div class="footerbox">
-                <div>
-                    <h3>波夏甜點店</h3>
-                </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#" class="link" data-url="about.html">關於我們/產品</a></li>
-                        <li><a href="#" class="link" data-url="products.html">線上訂購</a></li>
-                        <br>
-                        <li><a href="#" class="link" data-url="workshop.html">甜點工坊</a></li>
-                        <li><a href="#" class="link" data-url="contact.html">聯絡我們</a></li>
-                        <li><a href="#" class="link" data-url="faq.html">常見問題</a></li>
-                    </ul>
-                </div>
+    <!-- -------------------------------------footer----------------------------------------------- -->
+    <div class="footer">
+        <div class="footerbox">
+            <div>
+                <h3>波夏甜點店</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <div class="top">
+                        <li><a href="about.html" class="link" data-url="about.html">關於我們/產品</a></li>
+                        <li><a href="products.html" class="link" data-url="products.html">線上訂購</a></li>
+                    </div>
+                    <br>
+                    <li><a href="workshop.html" class="link" data-url="workshop.html">甜點工坊</a></li>
+                    <li><a href="contact.html" class="link" data-url="contact.html">聯絡我們</a></li>
+                    <li><a href="faq.html" class="link" data-url="faq.html">常見問題</a></li>
+                </ul>
+            </div>
 
-                <div class="social-media-icons">
-                    <a href="#" class="social" data-url="https://instagram.com">
-                        <i class="fab fa-instagram" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://facebook.com">
-                        <i class="fab fa-facebook" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://tiktok.com">
-                        <i class="fab fa-tiktok" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://linkedin.com">
-                        <i class="fab fa-linkedin" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://youtube.com">
-                        <i class="fab fa-youtube" style="font-size: 36px;"></i>
-                    </a>
-                </div>
+            <div class="social-media-icons">
+                <a href="#" class="social" data-url="https://instagram.com">
+                    <i class="fab fa-instagram" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://facebook.com">
+                    <i class="fab fa-facebook" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://tiktok.com">
+                    <i class="fab fa-tiktok" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://linkedin.com">
+                    <i class="fab fa-linkedin" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://youtube.com">
+                    <i class="fab fa-youtube" style="font-size: 36px;"></i>
+                </a>
             </div>
         </div>
     </div>
-    <script src="scriptCart.js"></script> <!-- Link to your JavaScript file -->
+
+
+
+    <script src="scriptCart.js"></script>
 </body>
+
 
 </html>

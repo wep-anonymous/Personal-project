@@ -1,4 +1,4 @@
-$(".title-link").hover(
+$(".logo").hover(
     function () {
         $(this).css("transform", "rotate(12deg)"); // Rotate to 15 degrees on hover
     },
@@ -7,102 +7,111 @@ $(".title-link").hover(
     }
 );
 
-document.querySelectorAll(".title-link").forEach((link) => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault(); // Prevent the default anchor behavior
-        const page = this.getAttribute("data-page"); // Get the page from data attribute
-        window.location.href = page; // Navigate to the specified page
-    });
+const hamburger = document.querySelector('.hamburger');
+const navlist = document.querySelector('.navlist');
+const iconLinks = document.querySelectorAll('.icon-link');
+
+function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navlist.classList.toggle('active');
+
+    if (navlist.classList.contains('active')) {
+        // Clear existing links to avoid duplicates
+        const existingNavLinks = navlist.querySelectorAll('.dynamic-navlink');
+        existingNavLinks.forEach(link => link.remove());
+
+        iconLinks.forEach(link => {
+            link.style.display = 'none';  // Hide the original icon links
+        });
+
+        // Create new navigation links for mobile view
+        const linksData = [
+            { href: 'cart.html', text: '購物車' },
+            { href: 'account.html', text: '帳戶' }
+        ];
+
+        linksData.forEach(linkData => {
+            const newLink = document.createElement('a');
+            newLink.href = linkData.href;
+            newLink.className = 'navlink dynamic-navlink'; // Add a class for dynamic links
+            newLink.textContent = linkData.text;
+            navlist.appendChild(newLink);
+        });
+    } else {
+        iconLinks.forEach(link => {
+            link.style.display = 'inline-block';  // Restore original icon links
+        });
+        // Optionally, you can remove the dynamic links when closing the menu
+        const dynamicLinks = navlist.querySelectorAll('.dynamic-navlink');
+        dynamicLinks.forEach(link => link.remove());
+    }
+}
+
+hamburger.addEventListener('click', toggleMenu);
+
+// Ensure correct icon display on window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 868) {
+        iconLinks.forEach(link => {
+            link.innerHTML = link.href.includes('cart.html') ?
+                '<i class="fas fa-shopping-cart"></i>' : '<i class="fas fa-user"></i>';
+        });
+    }
 });
+
+
+
+// Close the nav and overlay when the overlay itself is clicked
+// overlay.addEventListener('click', () => {
+//     hamburger.classList.remove('active');
+//     navlist.classList.remove('active');
+//     overlay.classList.remove('active');
+// });
+
+// Ensure correct icon display on window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 868) {
+        iconLinks.forEach(link => {
+            link.innerHTML = link.href.includes('cart.html') ?
+                '<i class="fas fa-shopping-cart"></i>' : '<i class="fas fa-user"></i>';
+        });
+    }
+});
+
+// ---------------------------------------------------------------------------
+
 
 document.querySelectorAll(".navlink").forEach((link) => {
     link.addEventListener("click", function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
-        const page = this.getAttribute("data-page"); // Get the page from data attribute
+        const page = this.getAttribute("href"); // Get the page from href attribute
         window.location.href = page; // Navigate to the specified page
     });
 });
 
-document.querySelector(".buynow").addEventListener("click", function () {
-    window.location.href = "products.html";
-});
 
-document.querySelector(".buynow2").addEventListener("click", function () {
-    window.location.href = "products.html";
-});
+// Toggle FAQ answers on button click
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        // Toggle the answer visibility
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
 
-document.querySelector(".lessonnow").addEventListener("click", function () {
-    window.location.href = "workshop.html";
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Initialize carousels
-    const carousels = [
-        {
-            images: document.querySelector(".carousel-images-1"),
-            prevBtn: document.getElementById("prevBtn1"),
-            nextBtn: document.getElementById("nextBtn1"),
-            progressBar: document.querySelector(".progress-1"),
-            currentIndex: 0
-        },
-        {
-            images: document.querySelector(".carousel-images-2"),
-            prevBtn: document.getElementById("prevBtn2"),
-            nextBtn: document.getElementById("nextBtn2"),
-            progressBar: document.querySelector(".progress-2"),
-            currentIndex: 0
-        }
-    ];
-
-    carousels.forEach((carousel, index) => {
-        const totalImages = carousel.images.children.length;
-        const visibleImages = 2; // Change as per requirement
-        const imageWidth = 500; // Width of each image in px
-
-        function updateCarousel() {
-            const offset = -carousel.currentIndex * imageWidth; // Calculate offset for sliding
-            carousel.images.style.transform = `translateX(${offset}px)`;
-
-            // Update progress bar
-            const progressPercentage =
-                ((carousel.currentIndex + 1) / (totalImages - visibleImages + 1)) * 100;
-            carousel.progressBar.style.width = `${progressPercentage}%`;
-        }
-
-        function showImage(index) {
-            if (index >= totalImages - visibleImages + 1) {
-                carousel.currentIndex = 0; // Loop back to the start
-            } else if (index < 0) {
-                carousel.currentIndex = totalImages - visibleImages; // Loop back to the end
-            } else {
-                carousel.currentIndex = index;
-            }
-
-            updateCarousel();
-        }
-
-        // Auto-slide every 3 seconds
-        setInterval(() => {
-            showImage(carousel.currentIndex + 1);
-        }, 3000);
-
-        carousel.nextBtn.addEventListener("click", () => {
-            showImage(carousel.currentIndex + 1); // Move one image forward
-        });
-
-        carousel.prevBtn.addEventListener("click", () => {
-            showImage(carousel.currentIndex - 1); // Move one image backward
-        });
-
-        // Initialize with the first image visible
-        updateCarousel();
+        // Optionally, toggle the question's font color or icon to indicate it’s expanded
+        question.classList.toggle('active');
     });
 });
 
+
+
+
+
+
+// ---------------------------------------------------------------------
 $(document).ready(function () {
     // Handle click events on footer links
     $(".link").on("click", function (event) {
-        event.preventDefault(); // Prevent default link behavior
+        // event.preventDefault(); // Prevent default link behavior
         let url = $(this).data("url"); // Get the URL from the data attribute
         window.location.href = url; // Redirect to the URL
     });
@@ -114,3 +123,5 @@ $(document).ready(function () {
         window.open(url, "_blank"); // Open the URL in a new tab
     });
 });
+
+// -----------------------------------------------------------------------

@@ -4,85 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>波夏甜點店</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>首頁</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="stylesFAQ.css">
+
 </head>
 
 <body>
-    <div class="banner">
-        <div class="title">
-            <a href="#" class="title-link" data-page="index.html">波夏甜點店</a>
+    <nav>
+        <div class="logoCake">
+            <a href="index.html" class="logo">波夏甜點店</a>
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/cake.png" alt="cake" />
         </div>
-        <div class="navlinks">
-            <a href="#" class="navlink" data-page="about.html">關於我們/產品</a>
-            <a href="#" class="navlink" data-page="products.html">線上訂購</a>
-            <a href="#" class="navlink" data-page="workshop.html">甜點工坊</a>
-            <a href="#" class="navlink" data-page="contact.html">聯絡我們</a>
-            <a href="#" class="navlink" data-page="faq.html">常見問題FAQ</a>
-            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
-            <a href="account.html" class="icon-link"><i class="fas fa-user"></i></a>
+        <ul class="navlist">
+            <li><a href="about.html" class="navlink">關於我們/產品</a></li>
+            <li><a href="products.html" class="navlink">線上訂購</a></li>
+            <li><a href="workshop.html" class="navlink">甜點工坊</a></li>
+            <li><a href="contact.html" class="navlink">聯絡我們</a></li>
+            <li><a href="faq.html" class="navlink">常見問題FAQ</a></li>
+            <li><a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="account.html" class="icon-link"><i class="fas fa-user"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
-    <div class="wrapper">
-
-
-        <!-- Container 2: First Carousel -->
-        <div class="container2">
-            <div class="content">
-                <div>
-                    <h4 class="titlebox">常見問題FAQ</h4>
-                </div>
-                <div class="subtitle">
-                    <h2>常見問題FAQ</h2>
-                </div>
-
+    </nav>
+    <div class="container2">
+        <div class="content">
+            <div>
+                <h4 class="titlebox">常見問題 FAQ</h4>
             </div>
-        </div>
-
-
-
-
-
-        <div class="footer">
-            <div class="footerbox">
-                <div>
-                    <h3>波夏甜點店</h3>
+            <div class="subtitle">
+                <h2>常見問題 FAQ</h2>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <button class="faq-question">Q1: 你們的甜點有哪些特色？</button>
+                    <div class="faq-answer">
+                        <p>我們的甜點採用新鮮天然食材，強調少油少糖，且不使用人工添加劑，適合所有年齡層享用。</p>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#" class="link" data-url="about.html">關於我們/產品</a></li>
-                        <li><a href="#" class="link" data-url="products.html">線上訂購</a></li>
-                        <br>
-                        <li><a href="#" class="link" data-url="workshop.html">甜點工坊</a></li>
-                        <li><a href="#" class="link" data-url="contact.html">聯絡我們</a></li>
-                        <li><a href="#" class="link" data-url="faq.html">常見問題</a></li>
-                    </ul>
+                <div class="faq-item">
+                    <button class="faq-question">Q2: 是否提供客製化訂單？</button>
+                    <div class="faq-answer">
+                        <p>是的，我們提供客製化訂單服務，歡迎提前三天預訂，以便我們準備您所需的甜點。</p>
+                    </div>
                 </div>
-
-                <div class="social-media-icons">
-                    <a href="#" class="social" data-url="https://instagram.com">
-                        <i class="fab fa-instagram" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://facebook.com">
-                        <i class="fab fa-facebook" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://tiktok.com">
-                        <i class="fab fa-tiktok" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://linkedin.com">
-                        <i class="fab fa-linkedin" style="font-size: 36px;"></i>
-                    </a>
-                    <a href="#" class="social" data-url="https://youtube.com">
-                        <i class="fab fa-youtube" style="font-size: 36px;"></i>
-                    </a>
+                <div class="faq-item">
+                    <button class="faq-question">Q3: 是否有素食或無麩質甜點？</button>
+                    <div class="faq-answer">
+                        <p>我們提供多款素食及無麩質甜點，滿足不同飲食需求，詳細資訊請參考我們的產品頁面。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Q4: 你們的營業時間是什麼時候？</button>
+                    <div class="faq-answer">
+                        <p>我們的營業時間為每日上午10點至晚上8點。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Q5: 是否提供配送服務？</button>
+                    <div class="faq-answer">
+                        <p>目前我們僅限部分地區提供配送服務，請在訂單頁面確認您的地址是否符合配送範圍。</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <!-- Floating Button -->
+    <a href="/cart.html" class="floating-btn">
+        🛒
+    </a>
+    <!-- -------------------------------------footer----------------------------------------------- -->
+    <div class="footer">
+        <div class="footerbox">
+            <div>
+                <h3>波夏甜點店</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <div class="top">
+                        <li><a href="about.html" class="link" data-url="about.html">關於我們/產品</a></li>
+                        <li><a href="products.html" class="link" data-url="products.html">線上訂購</a></li>
+                    </div>
+                    <br>
+                    <li><a href="workshop.html" class="link" data-url="workshop.html">甜點工坊</a></li>
+                    <li><a href="contact.html" class="link" data-url="contact.html">聯絡我們</a></li>
+                    <li><a href="faq.html" class="link" data-url="faq.html">常見問題</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media-icons">
+                <a href="#" class="social" data-url="https://instagram.com">
+                    <i class="fab fa-instagram" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://facebook.com">
+                    <i class="fab fa-facebook" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://tiktok.com">
+                    <i class="fab fa-tiktok" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://linkedin.com">
+                    <i class="fab fa-linkedin" style="font-size: 36px;"></i>
+                </a>
+                <a href="#" class="social" data-url="https://youtube.com">
+                    <i class="fab fa-youtube" style="font-size: 36px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="scriptFAQ.js"></script>
 </body>
+
 
 </html>
