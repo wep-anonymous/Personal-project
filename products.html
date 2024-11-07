@@ -31,33 +31,35 @@
         </div>
     </nav>
 
+
     <div class="subtitle">
         <h2>我們的產品</h2>
     </div>
 
     <div class="product-page">
+        <!-- Section buttons -->
         <div class="section-buttons">
-            <button class="section-btn bg-blue-500 text-white px-4 py-2 rounded" data-section="A">
-                <img src="/Picture/可麗露.jpg" alt="Section A" class="mr-2 h-6 w-6" />
-                Section A
+            <button class="section-btn" data-section="A">
+                <img src="/Picture/可麗露.jpg" alt="Section A" />
             </button>
-            <button class="section-btn px-4 py-2 rounded" data-section="B">
-                <img src="/Picture/酸土鳳梨酥.jpg" alt="Section B" class="mr-2 h-6 w-6" />
-                Section B
+            <button class="section-btn" data-section="B">
+                <img src="/Picture/酸土鳳梨酥.jpg" alt="Section B" />
             </button>
-            <button class="section-btn px-4 py-2 rounded" data-section="C">
-                <img src="/Picture/咖哩麵包.jpg" alt="Section C" class="mr-2 h-6 w-6" />
-                Section C
+            <button class="section-btn" data-section="C">
+                <img src="/Picture/咖哩麵包.jpg" alt="Section C" />
             </button>
-            <button class="section-btn px-4 py-2 rounded" data-section="D">
-                <img src="/Picture/法國小金桔果泥軟糖.jpg" alt="Section D" class="mr-2 h-6 w-6" />
-                Section D
+            <button class="section-btn" data-section="D">
+                <img src="/Picture/法國小金桔果泥軟糖.jpg" alt="Section D" />
             </button>
         </div>
-        <div id="product-grid" class="grid grid-cols-3 gap-4"></div>
+
+        <!-- Product display grid -->
+        <div class="product-grid-container">
+            <div id="product-grid" class="product-grid"></div>
+        </div>
     </div>
 
-    <a href="/cart.html" class="floating-btn">
+    <a href="cart.html" class="floating-btn">
         🛒
     </a>
 
